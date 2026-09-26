@@ -7,14 +7,31 @@ on:
   #   branches: [ "main" ]
   workflow_dispatch:
 
+env:
+  x: 15
+  y: 16
+  z: "ahmed"
+
 jobs:
   build:
     runs-on: ubuntu-latest
     environment: dev
+    env:
+      x: 15
+      y: 16
+      z: "ahmed"
     steps:
     - name: test
+      env:
+        x: 15
+        y: 16
+        z: "ahmed"
       run: |
-        echo ${{ vars.DEPI }}
+        echo ${{ env.x }}
+        echo ${{ env.z }}
+    - name: test
+      run: |
+        echo ${{ env.y }}
   test:
     needs: build
     runs-on: ubuntu-latest
