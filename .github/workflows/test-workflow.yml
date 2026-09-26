@@ -1,0 +1,16 @@
+name: Java CICD
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: 'java'
+  cancel-in-progress: false
+
+jobs:
+  build:
+    uses: ./.github/workflows/reusable-workflow.yaml
+
+    with:
+      image-name: "test-java-app"
+      environment: "test"
