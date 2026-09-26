@@ -30,6 +30,13 @@ jobs:
         distribution: 'adopt'
         java-version: '11'
 
+    - name: Cache Maven packages
+      uses: actions/cache@v6
+      with:
+        path: ~/.m2/repository
+        key: depijava-${{ runner.os }}-${{ hashFile('**/pom.xml') }}
+        restore-keys: depijava-${{ runner.os }}-
+
     - name: Build Java App
       run: |
         java --version
