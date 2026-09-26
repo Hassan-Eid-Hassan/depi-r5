@@ -22,13 +22,15 @@ jobs:
         fetch-depth: '0'
 
     - name: Setup java version 11
-      uses: actions/setup-java@v6
+      uses: actions/setup-java@v4
       with:
-        distribution: 'oracle'
+        distribution: 'adopt'
         java-version: '11'
 
     - name: Build Java App
-      run: mvn package install -DskipTests
+      run: |
+        java --version
+        mvn package install -DskipTests
 
     - name: Test Java App
       run: mvn test
