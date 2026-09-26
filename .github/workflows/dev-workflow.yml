@@ -1,4 +1,4 @@
-name: Java CICD
+name: dev Java CICD
 
 on:
   workflow_dispatch:

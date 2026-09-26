@@ -1,4 +1,4 @@
-name: Java CICD
+name: prod Java CICD
 
 on:
   workflow_dispatch:

@@ -1,4 +1,4 @@
-name: Java CICD
+name: test Java CICD
 
 on:
   workflow_dispatch:
