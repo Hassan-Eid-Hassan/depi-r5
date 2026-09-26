@@ -34,7 +34,7 @@ jobs:
       uses: actions/cache@v6
       with:
         path: ~/.m2/repository
-        key: depijava-${{ runner.os }}-${{ hashFile('**/pom.xml') }}
+        key: depijava-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
         restore-keys: depijava-${{ runner.os }}-
 
     - name: Build Java App
