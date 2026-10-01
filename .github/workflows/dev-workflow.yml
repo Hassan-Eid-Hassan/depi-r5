@@ -12,5 +12,5 @@ jobs:
     uses: ./.github/workflows/reusable-workflow.yaml
 
     with:
-      image-name: "dev-java-app"
+      image-name: "hassaneid/depi-java"
       environment: "dev"
