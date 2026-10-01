@@ -33,8 +33,9 @@ jobs:
     - name: Cache Maven packages
       uses: actions/cache@v6
       with:
-        cache-from: type=gha
-        cache-to: type=gha,mode=max
+        path: ~/.m2/repository
+        key: depijava-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
+        restore-keys: depijava-${{ runner.os }}-
 
     - name: Build Java App
       run: |
