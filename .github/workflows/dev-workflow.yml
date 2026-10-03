@@ -14,3 +14,5 @@ jobs:
     with:
       image-name: "hassaneid/depi-java"
       environment: "dev"
+    
+    secrets: inherit
